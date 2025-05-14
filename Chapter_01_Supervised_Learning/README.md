@@ -1,31 +1,41 @@
+# Chapter 01: Supervised Learning
 
-# Introduction_to_Machine_Learning
- 
-🎓 A collection of practical notebooks and projects for learning machine learning, from basics to advanced topics.
+This chapter introduces the fundamentals of supervised learning, where models are trained on labeled datasets to perform regression or classification tasks.
 
-## 🗂 Chapters
+## Topics Covered
 
-1. **Supervised Learning**
-   - Linear Regression ✅
-   - Logistic Regression 🚧
-2. **Unsupervised Learning**
-   - K-Means Clustering 🚧
-3. **Neural Networks**
-   - Perceptron, MLP, etc. 🚧
-4. **Computer Vision**
-5. **Natural Language Processing**
-6. **Contrastive Learning**
+- Linear Regression  
+- Polynomial Regression  
+- Logistic Regression  
+- K-Nearest Neighbors (KNN)  
+- Ensemble Learning (Decision Trees, Random Forest, XGBoost)
+
+## Folder Structure
+
+- `01-Linear Regression/`  
+  Notebooks focusing on linear and polynomial regression implementations from scratch and using sklearn.
+
+- `02-Logistic Regression/`  
+  Notebooks on logistic regression for binary classification.
+
+- `03-KNN/`  
+  Implementation of K-Nearest Neighbors algorithm.
+
+- `04-Ensemble Learning/`  
+  Ensemble techniques including decision trees, random forests, and XGBoost.
+
+## Recommended Order of Study
+
+1. Linear Regression  
+2. Logistic Regression  
+3. K-Nearest Neighbors  
+4. Ensemble Learning
+
+## Notes
+
+- Some notebooks require downloading datasets; download instructions are provided within each notebook.  
+- Google Colab and Kaggle links are available for online execution.
 
 ---
 
-## 📚 Tools Used
-
-- Python 3
-- NumPy, Pandas
-- Matplotlib, Seaborn
-- Scikit-learn
-- PyTorch / TensorFlow (for later chapters)
-
-## ✍️ Author
-Tala Kiyani
-GitHub: [tala-kiyani](https://github.com/tala-kiyani)
+Working through these notebooks will provide a solid base for understanding supervised learning algorithms.

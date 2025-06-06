@@ -109,6 +109,3 @@ The notebook includes two plots:
 1.  A scatter plot of the generated data points.
 2.  A final plot showing the original data points along with the fitted linear regression line calculated by the model.
 
-**![Fitted Regression Line](path/to/your/regression_plot.png)**
-
-> **Note:** To make the image appear, save the plot from your notebook as an image file (e.g., `regression_plot.png`), add it to your repository, and update the path in the line above.

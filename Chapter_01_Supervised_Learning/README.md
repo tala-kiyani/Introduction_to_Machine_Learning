@@ -46,3 +46,45 @@ Plugging these values into the formulas gives the final coefficients:
 
 #### ▶️ How to Run
 The code is in the `Simple_Regression.ipynb` Jupyter Notebook. You can open it and run the cells sequentially to see the calculations.
+
+---
+
+### 📝 Exercise 2: Analytical Linear Regression & Loss Surface Visualization
+
+This exercise expands on simple linear regression by first simulating data with a known relationship and then finding the line of best fit analytically. It also visualizes the **Mean Squared Error (MSE) loss surface** to show how the error changes with different coefficient values.
+
+#### 📊 Data Simulation
+The data is simulated based on the linear equation **$y = -15x + 20$**, with Gaussian noise added to the `y` values to make the task more realistic. A total of 1000 data points were generated.
+
+#### ➗ Methodology
+
+**1. Analytical Solution**
+
+The regression coefficients ($b_1$ for the slope and $b_0$ for the intercept) are calculated directly using the same formulas as in Exercise 1.
+
+**2. Loss Function Visualization**
+
+The **Mean Squared Error (MSE)** is used as the loss function to measure the model's error. The formula is:
+
+$$ MSE = \frac{1}{n} \sum_{i=1}^{n}(y_{pred_i} - y_i)^2 = \frac{1}{n} \sum_{i=1}^{n}((b_1x_i + b_0) - y_i)^2 $$
+
+A 3D surface plot is generated to show the MSE loss (on a log scale for better visualization) for a grid of different `b0` and `b1` values. The lowest point on this surface represents the optimal coefficients that minimize the error.
+
+#### 🔢 Results
+
+The analytical calculation produced the following regression equation:
+
+**$$ y = -15.02x + 20.18 $$**
+
+This is extremely close to the true relationship of $y = -15x + 20$, demonstrating that the analytical method successfully recovered the underlying pattern from the noisy data.
+
+#### 📈 Visualization
+
+The 3D plot of the MSE loss surface shows a clear convex bowl shape. The bottom of the bowl is the point of minimum loss, which corresponds to the analytically solved coefficients ($b_0 \approx 20$, $b_1 \approx -15$).
+
+**![MSE Loss Surface](path/to/your/image.png)**
+
+> **Note:** To make the image appear, you need to:
+> 1. Save the plot from your Jupyter Notebook as an image file (e.g., `loss_surface.png`).
+> 2. Add the image file to the same folder as your notebook in your GitHub repository.
+> 3. Update the `path/to/your/image.png` in the line above to the actual file name (e.g., `loss_surface.png`).

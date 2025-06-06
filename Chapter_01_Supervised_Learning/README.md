@@ -76,14 +76,6 @@ This is extremely close to the true relationship of $y = -15x + 20$, demonstrati
 #### 📈 Visualization
 The 3D plot of the MSE loss surface shows a clear convex bowl shape. The bottom of the bowl is the point of minimum loss, which corresponds to the analytically solved coefficients ($b_0 \approx 20$, $b_1 \approx -15$).
 
-**![MSE Loss Surface](path/to/your/image.png)**
-
-> **Note:** To make the image appear, you need to:
-> 1.  Save the plot from your Jupyter Notebook as an image file (e.g., `loss_surface.png`).
-> 2.  Add the image file to the same folder as your notebook in your GitHub repository.
-> 3.  Update the `path/to/your/image.png` in the line above to the actual file name (e.g., `loss_surface.png`).
-
----
 
 ### 📝 Exercise 3: Linear Regression with Closed-Form (Analytical) Solution
 

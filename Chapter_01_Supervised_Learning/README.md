@@ -109,3 +109,40 @@ The notebook includes two plots:
 1.  A scatter plot of the generated data points.
 2.  A final plot showing the original data points along with the fitted linear regression line calculated by the model.
 
+
+## Chapter 02: Optimization
+
+### 📝 Exercise 1: Gradient Descent on a Convex Function
+
+This notebook implements the gradient descent algorithm from scratch to find the minimum of a convex function. The optimization path is visualized on a contour plot to show how the algorithm iteratively converges to the optimal solution.
+
+#### ➗ Methodology
+
+**1. Cost Function**
+
+A simple convex cost function, **$J(w)$**, is defined with two parameters, $w_0$ and $w_1$:
+
+$$ J(w) = w_0^2 + 2w_1^2 $$
+
+The global minimum of this function is at the point (0, 0).
+
+**2. Gradient Descent Algorithm**
+
+Gradient descent is an iterative optimization algorithm used to find the minimum of a function. It works by repeatedly taking steps in the direction opposite to the gradient of the function at the current point. The update rule is:
+
+$$ w_{next} = w_{current} - \eta \nabla J(w_{current}) $$
+
+Where:
+* **$w$** is the vector of parameters.
+* **$\eta$** (eta) is the learning rate, which controls the step size.
+* **$\nabla J(w)$** is the gradient of the cost function.
+
+#### 🔢 Execution Details
+The algorithm was run with the following hyperparameters:
+* **Initial Point ($w_{init}$)**: `[4, 4]`
+* **Learning Rate ($\eta$)**: `0.01`
+* **Number of Steps**: `180`
+
+#### 📈 Visualization
+The result is visualized as a contour plot, where each line represents a constant value of the cost function. The path taken by gradient descent is plotted on top, clearly showing the steps from the initial point `[4, 4]` converging toward the minimum at `[0, 0]`.
+

@@ -1,41 +1,48 @@
-# Chapter 01: Supervised Learning
+# Introduction to Machine Learning: Coursework & Notes
 
-This chapter introduces the fundamentals of supervised learning, where models are trained on labeled datasets to perform regression or classification tasks.
-
-## Topics Covered
-
-- Linear Regression  
-- Polynomial Regression  
-- Logistic Regression  
-- K-Nearest Neighbors (KNN)  
-- Ensemble Learning (Decision Trees, Random Forest, XGBoost)
-
-## Folder Structure
-
-- `01-Linear Regression/`  
-  Notebooks focusing on linear and polynomial regression implementations from scratch and using sklearn.
-
-- `02-Logistic Regression/`  
-  Notebooks on logistic regression for binary classification.
-
-- `03-KNN/`  
-  Implementation of K-Nearest Neighbors algorithm.
-
-- `04-Ensemble Learning/`  
-  Ensemble techniques including decision trees, random forests, and XGBoost.
-
-## Recommended Order of Study
-
-1. Linear Regression  
-2. Logistic Regression  
-3. K-Nearest Neighbors  
-4. Ensemble Learning
-
-## Notes
-
-- Some notebooks require downloading datasets; download instructions are provided within each notebook.  
-- Google Colab and Kaggle links are available for online execution.
+This repository contains all the code, exercises, and notes from my journey through the "Introduction to Machine Learning" course. Each chapter and project is organized into its own directory.
 
 ---
+## Chapter 01: Supervised Learning
 
-Working through these notebooks will provide a solid base for understanding supervised learning algorithms.
+### 📝 Exercise 1: Simple Linear Regression from Scratch
+
+This project implements a simple linear regression model from scratch using Python. The goal is to calculate the regression coefficients (slope and intercept) for a given set of data points without relying on machine learning libraries like Scikit-learn.
+
+**The final regression equation is: $$ y = 3.35x - 2.85 $$**
+
+#### 📊 Dataset
+
+The model is built using the following sample data points:
+* **x**: `[5, 3, -1, 2, 6]`
+* **y**: `[14, 6, -5.5, 3.5, 18]`
+
+#### ➗ Methodology
+
+The regression line is of the form **$y = w_1x + w_0$**, where:
+* $w_1$ is the slope of the line.
+* $w_0$ is the y-intercept.
+
+These coefficients are calculated using the following formulas:
+
+1.  **Slope ($w_1$)**:
+    $$ w_1 = \frac{n(\sum x_i y_i) - (\sum x_i)(\sum y_i)}{n(\sum x_i^2) - (\sum x_i)^2} $$
+
+2.  **Y-Intercept ($w_0$)**:
+    $$ w_0 = \frac{\sum y_i - w_1 \sum x_i}{n} $$
+
+#### 🔢 Results
+
+Based on the provided dataset, the calculated components are:
+* **Number of data points (n)**: 5
+* **Sum of x ($\sum x_i$)**: 15
+* **Sum of y ($\sum y_i$)**: 36.0
+* **Sum of xy ($\sum x_i y_i$)**: 208.5
+* **Sum of x squared ($\sum x_i^2$)**: 75
+
+Plugging these values into the formulas gives the final coefficients:
+* **Slope ($w_1$)**: `3.35`
+* **Y-Intercept ($w_0$)**: `-2.85`
+
+#### ▶️ How to Run
+The code is in the `Simple_Regression.ipynb` Jupyter Notebook. You can open it and run the cells sequentially to see the calculations.

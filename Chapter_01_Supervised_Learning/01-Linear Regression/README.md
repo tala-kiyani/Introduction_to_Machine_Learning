@@ -109,6 +109,37 @@ The notebook includes two plots:
 1.  A scatter plot of the generated data points.
 2.  A final plot showing the original data points along with the fitted linear regression line calculated by the model.
 
+---
+
+### 📝 Exercise 4: Polynomial Regression and Model Complexity (Underfitting vs. Overfitting)
+
+This notebook implements polynomial regression to fit a model to data with non-linear patterns. It uses the analytical closed-form solution on engineered polynomial features.
+
+Crucially, it explores the relationship between **model complexity** (the degree of the polynomial) and model performance by analyzing the Root Mean Square Error (RMSE) on both training and testing datasets. This helps visualize the concepts of **underfitting**, **good fit**, and **overfitting**.
+
+#### ➗ Methodology
+
+**1. Feature Engineering**
+To fit a non-linear model, the original feature `x` is transformed into polynomial features. For a degree `m`, the input matrix `X` is expanded to include columns for `x`, `x²`, ..., `x^m`. The model's hypothesis then becomes:
+
+$$ h_w(x) = w_0 + w_1 x + w_2 x^2 + \dots + w_m x^m $$
+
+**2. Error Metric**
+The **Root Mean Square Error (RMSE)** is used to evaluate the model's performance on both the training and test sets.
+
+$$ RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n}(y_{pred_i} - y_i)^2} $$
+
+#### 📈 Analysis: Underfitting vs. Overfitting
+
+By training models with polynomial degrees from 0 to 8, we can observe the bias-variance tradeoff:
+
+* **Underfitting (Low Degree, e.g., 0-1)**: The model is too simple to capture the underlying trend. Both **training and testing errors are high**.
+* **Good Fit (Optimal Degree, e.g., 2-3)**: The model generalizes well. Both **training and testing errors are low**, with the test error being at its minimum. In this case, a degree 3 polynomial seems optimal.
+* **Overfitting (High Degree, e.g., 4+)**: The model becomes too complex and starts fitting the noise in the training data. The **training error continues to decrease**, but the **testing error starts to increase**, indicating poor generalization to unseen data.
+
+This relationship is visualized in the RMSE vs. Polynomial Degree plot:
+
+---
 
 ## Chapter 02: Optimization
 

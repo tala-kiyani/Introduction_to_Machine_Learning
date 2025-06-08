@@ -176,4 +176,29 @@ The algorithm was run with the following hyperparameters:
 
 #### 📈 Visualization
 The result is visualized as a contour plot, where each line represents a constant value of the cost function. The path taken by gradient descent is plotted on top, clearly showing the steps from the initial point `[4, 4]` converging toward the minimum at `[0, 0]`.
+### 📝 Exercise 2: Applying Gradient Descent to Linear Regression
+
+This exercise demonstrates how to use the **Gradient Descent** algorithm to find the optimal parameters for a linear regression model. This iterative approach serves as an alternative to the analytical closed-form solution.
+
+#### ➗ Methodology
+
+**1. Cost Function (MSE)**
+The goal is to minimize the **Mean Squared Error (MSE)** cost function, which measures the average squared difference between the predicted ($h_w(x_i)$) and actual ($y_i$) values.
+
+$$ J(w) = \frac{1}{2n} \sum_{i=1}^{n}(h_w(x_i) - y_i)^2 \quad \text{where} \quad h_w(x_i) = w_0 + w_1 x_i $$
+
+**2. Algorithm**
+Gradient descent iteratively adjusts the parameters $w_0$ and $w_1$ by moving in the direction of the negative gradient of the cost function. The algorithm is run for 1000 steps with a learning rate of 0.01.
+
+#### 🔢 Results
+
+The parameters found by the gradient descent algorithm are:
+* **Calculated Slope ($w_1$)**: 2.86
+* **Calculated Intercept ($w_0$)**: 6.87
+
+These results are nearly identical to those found using the Normal Equation, demonstrating that for a convex problem like linear regression, both methods converge to the same optimal solution.
+
+#### 📈 Visualization
+The final plot shows the synthetic data points and the best-fit line discovered by the gradient descent algorithm.
+
 

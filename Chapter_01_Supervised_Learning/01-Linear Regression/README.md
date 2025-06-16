@@ -222,6 +222,46 @@ The parameters found by the gradient descent algorithm are:
 These results are nearly identical to those found using the Normal Equation, demonstrating that for a convex problem like linear regression, both methods converge to the same optimal solution.
 
 #### 📈 Visualization
+
+---
 The final plot shows the synthetic data points and the best-fit line discovered by the gradient descent algorithm.
+## Chapter 03: Case Study - Regression
 
+### 🏠 Project 1: Tehran House Price Prediction
 
+This project is an end-to-end case study focused on predicting house prices in Tehran using a real-world dataset. The notebook covers data loading, cleaning, exploratory data analysis (EDA), feature engineering, model training, and evaluation.
+
+#### ➗ Methodology
+The project uses **Ridge Regression** (Linear Regression with L2 Regularization) to predict prices. Key preprocessing steps include one-hot encoding for the `Address` feature and `StandardScaler` for numerical features.
+
+#### 📈 Evaluation
+The model's performance is evaluated on a test set using **Mean Squared Error (MSE)** and the **R-squared (R²)** metric.
+---
+
+### 🏠 Project 2: California House Price Prediction (Model Comparison)
+
+This project tackles the classic California Housing dataset to predict house prices. The primary goal is to train, evaluate, and compare the performance of four different regression models to determine which one performs best on this dataset.
+
+#### 📊 Dataset
+The project uses the California Housing dataset, available from `sklearn.datasets`. The target variable is the median house value for California districts.
+
+#### ➗ Methodology
+
+**1. Exploratory Data Analysis (EDA)**
+The notebook begins with an EDA phase, which includes:
+* Generating histograms for each feature to understand their distributions.
+* Creating a correlation matrix and heatmap to visualize the relationships between different features.
+
+**2. Model Training & Comparison**
+Four distinct regression models are trained and evaluated:
+1.  **Linear Regression**: A baseline linear model.
+2.  **Decision Tree Regressor**: A non-linear model that learns by splitting the data into branches.
+3.  **Random Forest Regressor**: An ensemble model that builds and aggregates multiple decision trees to improve accuracy and control overfitting.
+4.  **Gradient Boosting Regressor**: An advanced ensemble model that builds trees sequentially, with each new tree correcting the errors of the previous one.
+
+#### 📈 Evaluation
+
+The performance of each model is measured using the **Root Mean Square Error (RMSE)**. The notebook calculates the RMSE for each of the four models on the test set, allowing for a direct comparison to identify the most effective algorithm for this prediction task.
+
+#### 📊 Visualization
+EDA is supported by visualizations, including a heatmap of the feature correlation matrix.

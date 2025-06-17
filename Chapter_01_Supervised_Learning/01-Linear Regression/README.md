@@ -238,30 +238,24 @@ The project uses **Ridge Regression** (Linear Regression with L2 Regularization)
 The model's performance is evaluated on a test set using **Mean Squared Error (MSE)** and the **R-squared (R²)** metric.
 ---
 
-### 🏠 Project 2: California House Price Prediction (Model Comparison)
 
-This project tackles the classic California Housing dataset to predict house prices. The primary goal is to train, evaluate, and compare the performance of four different regression models to determine which one performs best on this dataset.
+### 🏠 Project 2: California House Price Prediction with Linear Regression
+
+This project uses a multiple linear regression model to predict median house values in California districts. It demonstrates a foundational machine learning workflow using the Scikit-learn library to load a dataset, split the data, train a model, and evaluate its performance.
 
 #### 📊 Dataset
-The project uses the California Housing dataset, available from `sklearn.datasets`. The target variable is the median house value for California districts.
+The project uses the classic **California Housing dataset**, loaded directly from Scikit-learn. The goal is to predict the `target` (median house value) based on 8 numerical features, including median income, house age, and location.
 
 #### ➗ Methodology
-
-**1. Exploratory Data Analysis (EDA)**
-The notebook begins with an EDA phase, which includes:
-* Generating histograms for each feature to understand their distributions.
-* Creating a correlation matrix and heatmap to visualize the relationships between different features.
-
-**2. Model Training & Comparison**
-Four distinct regression models are trained and evaluated:
-1.  **Linear Regression**: A baseline linear model.
-2.  **Decision Tree Regressor**: A non-linear model that learns by splitting the data into branches.
-3.  **Random Forest Regressor**: An ensemble model that builds and aggregates multiple decision trees to improve accuracy and control overfitting.
-4.  **Gradient Boosting Regressor**: An advanced ensemble model that builds trees sequentially, with each new tree correcting the errors of the previous one.
+The workflow is a straightforward implementation of a supervised learning task:
+1.  **Load Data**: The dataset is loaded using `sklearn.datasets.fetch_california_housing`.
+2.  **Data Splitting**: The data is split into a training set (80%) and a testing set (20%) to ensure the model can be evaluated on unseen data.
+3.  **Model Training**: A `LinearRegression` model from Scikit-learn is initialized and trained on the training data (`X_train`, `y_train`).
+4.  **Prediction**: The trained model is used to make predictions on the test set (`X_test`).
 
 #### 📈 Evaluation
-
-The performance of each model is measured using the **Root Mean Square Error (RMSE)**. The notebook calculates the RMSE for each of the four models on the test set, allowing for a direct comparison to identify the most effective algorithm for this prediction task.
+The model's accuracy is evaluated on the test set by comparing the predicted values (`y_pred`) against the actual values (`y_test`).
+* **Metric**: Mean Squared Error (MSE) is calculated to quantify the average squared difference between the predicted and actual prices.
 
 #### 📊 Visualization
-EDA is supported by visualizations, including a heatmap of the feature correlation matrix.
+A scatter plot is created to visually inspect the model's performance. It plots the actual house prices from the test set against the predicted prices. In a perfect model, all points would lie on a 45-degree diagonal line.

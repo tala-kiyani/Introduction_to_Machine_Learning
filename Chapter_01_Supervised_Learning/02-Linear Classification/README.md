@@ -55,7 +55,3 @@ The Perceptron model is trained on a portion of the dataset and then evaluated o
 The final output is a scatter plot that visualizes the model's performance on the test data. It shows:
 * The data points for the two classes (malignant and benign).
 * The linear **decision boundary** that the Perceptron has learned. This line separates the two-dimensional feature space into the two predicted classes.
-
-**![Perceptron Decision Boundary](path/to/your/perceptron_boundary_plot.png)**
-
-> **Note:** To make the image appear, save the plot from your notebook as an image file (e.g., `perceptron_boundary_plot.png`), add it to your repository, and update the path in the markdown line above.
